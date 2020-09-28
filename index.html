@@ -59,12 +59,10 @@
     .slick-next::before {
       content: "\f054";
       font-family: "Font Awesome 5 Free";
-      font-weight: 900 !important;
+      font-weight: 900;
       cursor: pointer;
-      ;
       top: 50%;
       width: auto;
-      ;
       color: #4ec425;
       font-size: 18px;
       transition: 0.6s ease;
@@ -79,9 +77,8 @@
     .slick-prev::before {
       content: "\f053";
       font-family: "Font Awesome 5 Free";
-      font-weight: 900 !important;
+      font-weight: 900;
       cursor: pointer;
-      ;
       top: 50%;
       color: #4ec425;
       font-size: 18px;
@@ -107,12 +104,23 @@
     }
 
 
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
       .slider div img {
         max-height: 350px;
         width: auto;
       }
     }
+
+    @media (max-width: 800px) {
+      .slider {
+      width: 60%;
+      margin: 100px auto;
+    }
+
+    } */
+
+
+
   </style>
 </head>
 
@@ -120,16 +128,16 @@
 
   <section class="variable slider">
     <div>
-      <img loading="lazy" src="slides/1-b.jpg" alt="Jungle Gym Company timeline image">
+      <img loading="lazy" src="/slides/1-b.jpg" alt="Jungle Gym Company timeline image">
     </div>
     <div>
-      <img loading="lazy" src="slides/2-b.jpg" alt="Jungle Gym Company timeline image">
+      <img loading="lazy" src="/slides/2-b.jpg" alt="Jungle Gym Company timeline image">
     </div>
     <div>
-      <img loading="lazy" src="slides/3-b.png" alt="Jungle Gym Company timeline image">
+      <img loading="lazy" src="/slides/3-b.png" alt="Jungle Gym Company timeline image">
     </div>
     <div>
-      <img loading="lazy" src="slides/4-b.png" alt="Jungle Gym Company timeline image">
+      <img loading="lazy" src="/slides/4-b.png" alt="Jungle Gym Company timeline image">
     </div>
     <!-- <div>
       <img src="http://placehold.it/350x300?text=5">
@@ -200,6 +208,7 @@
       });
     });
   </script>
+  
 
 </body>
 
