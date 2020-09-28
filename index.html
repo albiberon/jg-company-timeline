@@ -105,6 +105,14 @@
       opacity: 1;
       transform: scale(2);
     }
+
+
+    @media (min-width: 1024px) {
+      .slider div img {
+        max-height: 350px;
+        width: auto;
+      }
+    }
   </style>
 </head>
 
@@ -184,7 +192,7 @@
       $(".variable").slick({
         dots: true,
         infinite: false,
-        variableWidth: true
+        variableWidth: true,
       });
       $(".lazy").slick({
         lazyLoad: 'ondemand', // ondemand progressive anticipated
