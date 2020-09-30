@@ -138,7 +138,7 @@ Read the comments to get informed about each element and script
 
       .slick-slide img {
         width: auto;
-        max-height: 200px;
+        max-height: 300px;
       }
     }
   </style>
@@ -146,7 +146,17 @@ Read the comments to get informed about each element and script
 
 <body>
 
+
+  <!-- Timeline carousel start -->
+
   <section class="variable slider">
+    <!--
+
+      In order to add/remove content, add a new div element with an image inside.
+      Div element must be inside this <section> tag 
+
+    -->
+
     <div>
       <img loading="lazy" src="slides/story01.jpg" alt="Jungle Gym Company timeline image">
     </div>
@@ -162,32 +172,40 @@ Read the comments to get informed about each element and script
     <div>
       <img loading="lazy" src="slides/story05.jpg" alt="Jungle Gym Company timeline image">
     </div>
-    <!-- <div>
+
+    <!-- 
+    <div>
       <img loading="lazy" data-lazy="slides/6-f.jpg" alt="Jungle Gym Company timeline image">
     </div>
     <div>
       <img loading="lazy" data-lazy="slides/7-f.jpg" alt="Jungle Gym Company timeline image">
     </div> -->
 
+
+    
+    <!-- Timeline carousel end -->
+
   </section>
+
+
 
 
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  
   <script type="text/javascript">
     $(document).on('ready', function () {
- 
       $(".variable").slick({
-        dots: true,
-        infinite: false,
-        variableWidth: true,
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-          {
-            breakpoint: 800,
+        dots: true,             // shows the progress dots
+        infinite: false,        // Timeline loops back to the first image when this option turned true
+        variableWidth: true,    // Turn true if the dimensions of the timeline images are different 
+        slidesToShow: 4,        // On desktop view the script shows 5 images at once.
+        slidesToScroll: 2,      // Two images skipped once next button clicked
+        autoplay: true,         // Turning this 'true' makes the timeline go to next set of images automaticly with animation  
+        autoplaySpeed: 5000,    // Timeline goes to the next set of images every 5000 miliseconds (5 sec)
+        responsive: [           // Using this attribute makes the timeline responsive
+          {                     // Mobile view related styles start
+            breakpoint: 800,    // Following values apply for screens below 800px
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
@@ -197,7 +215,7 @@ Read the comments to get informed about each element and script
             autoplaySpeed: 5000
             }},
             {
-            breakpoint: 450,
+            breakpoint: 450,    // Following values apply for screens below 450px
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -208,10 +226,6 @@ Read the comments to get informed about each element and script
             }
           }
         ]
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
       });
     });
   </script>
